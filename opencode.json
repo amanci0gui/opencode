@@ -1,0 +1,40 @@
+{
+  "plugins": [
+    "superpowers@git+https://github.com/obra/superpowers.git",
+    "@mohak34/opencode-notifier@latest"
+  ],
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer ctx7sk-f6c12c64-2c7f-4d80-becb-abaa8f1b123e"
+      }
+    },
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@playwright/mcp@latest"
+      ],
+      "enabled": true
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"]
+    }
+  },
+  "instructions": [
+    "/home/guiamancio/.config/opencode/AGENTS.caveman.md"
+  ],
+  "permission": {
+    "skill": {
+      "caveman": "allow",
+      "caveman-commit": "allow",
+      "caveman-review": "allow",
+      "caveman-help": "allow",
+      "caveman-compress": "allow"
+    }
+  }
+}
